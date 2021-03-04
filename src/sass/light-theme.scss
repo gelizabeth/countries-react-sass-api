@@ -1,0 +1,29 @@
+@import './config';
+$bg-color-l: hsl(0, 0%, 98%);
+$primary-color-l:hsl(200, 15%, 8%);
+$secondary-color-l: hsl(0, 0%, 100%);
+$input-color-l: hsl(0, 0%, 52%);
+.App{
+   
+    &_light{
+        @include transition-ease;
+        background-color: $bg-color-l;
+        color: $primary-color-l;
+        .country-card{
+            @include transition-ease;
+            background-color: $secondary-color-l;
+        }
+        .country-list{
+            &__search{
+                color: $input-color-l;
+                background-color: $secondary-color-l;
+                border: 1px solid $bg-color-l;
+                box-shadow: 0 3px 5px rgba(black, 0.2);
+                
+                &::placeholder{
+                    color: $input-color-l; 
+                }
+            }
+        }
+    }
+}

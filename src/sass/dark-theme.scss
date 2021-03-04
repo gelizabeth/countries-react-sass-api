@@ -1,0 +1,29 @@
+@import './config';
+
+$bg-color-d: hsl(207, 26%, 17%);
+$primary-color-d:hsl(0, 0%, 100%);
+$secondary-color-d: hsl(209, 23%, 22%);
+.App{
+    
+    &_dark{
+        @include transition-ease;
+        background-color: $bg-color-d;
+        color: $primary-color-d;
+        .country-card{
+            @include transition-ease;
+            background-color: $secondary-color-d;
+        }
+        .country-list{
+            &__search{
+                color: $primary-color-d;
+                background-color: $secondary-color-d;
+                border: 1px solid $bg-color-d;
+                box-shadow: 0 3px 5px rgba(black, 0.2);
+                
+                &::placeholder{
+                    color: $primary-color-d; 
+                }
+            }
+        }
+    }
+}
