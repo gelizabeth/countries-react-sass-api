@@ -8,6 +8,23 @@
         margin: 1.5rem auto;
         border-radius: 5px;
         outline: none;
+        &::before{
+            display: block;
+            content: '&#xF002;';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: black;
+        }
+        
+    }
+    &__filter{
+        padding: 1rem;
+        outline: none;
+        border-radius: 5px;
+        margin: 1rem;
+        margin-right: auto;
+        width: 200px;
         
     }
     &__container{

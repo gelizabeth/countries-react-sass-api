@@ -24,6 +24,11 @@ $input-color-l: hsl(0, 0%, 52%);
                     color: $input-color-l; 
                 }
             }
+            &__filter{
+                
+                color: $primary-color-l;
+                background-color: $secondary-color-l;
+            }
         }
     }
 }
