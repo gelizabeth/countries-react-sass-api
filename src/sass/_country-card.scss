@@ -1,7 +1,7 @@
 @import './config';
 .country-card{
     max-width: 262px;
-    margin: 2rem auto 2.5rem;
+    margin: 0rem auto 2.5rem;
     height: 336px;
     border-radius: 5px;
     box-shadow: 0 3px 5px rgba(black, 0.2);
@@ -18,15 +18,16 @@
         }
     }
     &__info{
-        padding: 1rem 1.5rem;  
+        padding: 1.6rem 1.5rem;  
     }
     &__name{
         margin-bottom: 1rem;
         font-size: 1.2rem;
+        font-weight: 800;
     }
     &__content{
         .content__item{
-            margin: 0.3rem 0 0;
+            margin: 0.2rem 0 0;
             font-weight: 600;
             font-size: 0.875rem;
             span{
