@@ -14,6 +14,7 @@ export const CountryList = ({ countries }) => {
 
         setCountriesDisplay(countries);
         
+        
     }, [countries]);
 
     useEffect(() => {
@@ -60,7 +61,14 @@ export const CountryList = ({ countries }) => {
             </DropdownButton>
             <div className="country-list__container">
                 {countriesDisplay.map((country, index) => (
-                    <CountryCard key={index} name={country.name} population={country.population} region={country.region} capital={country.capital} flag={country.flag}></CountryCard>
+                    <CountryCard 
+                    key={index} 
+                    alpha3Code={country.alpha3Code}
+                    name={country.name} 
+                    population={country.population} 
+                    region={country.region} 
+                    capital={country.capital} 
+                    flag={country.flag}></CountryCard>
                 ))}
             </div>
 

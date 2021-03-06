@@ -12,6 +12,9 @@ $input-color-l: hsl(0, 0%, 52%);
         .country-card{
             @include transition-ease;
             background-color: $secondary-color-l;
+            &__name{
+                color: $primary-color-l; 
+            }
         }
         .country-list{
             &__search, .input-group{
@@ -48,6 +51,16 @@ $input-color-l: hsl(0, 0%, 52%);
                 &-item{
                     color: $primary-color-l;
                 }
+            }
+        }
+        .country{
+
+            &__button{
+                color: $primary-color-l;
+                background-color: $secondary-color-l;
+                border: 1px solid $bg-color-l;
+                box-shadow: 0 3px 5px rgba(black, 0.2);
+                
             }
         }
     }
