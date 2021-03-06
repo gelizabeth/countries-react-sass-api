@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './app.scss';
+
 import './sass/light-theme.scss'
 import './sass/dark-theme.scss'
 import { CountryList } from './components/CountryList';

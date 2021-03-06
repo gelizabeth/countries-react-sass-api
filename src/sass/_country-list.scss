@@ -2,30 +2,67 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    &__search{
-        padding: 0.9rem;
-        width: 345px;
-        margin: 1.5rem auto;
-        border-radius: 5px;
-        outline: none;
-        &::before{
-            display: block;
-            content: '&#xF002;';
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            color: black;
+    &__search, .input-group{
+       
+            padding: 0.35rem 1.2rem;
+            width: 345px;
+            margin: 1.5rem auto;
+            border-radius: 5px;
+            outline: none;
+        .btn-outline-secondary{
+            border-color: transparent;
+            background-color: transparent;
+            font-size: 0.9rem;
+            &:focus{
+                outline: none;
+                background-color: transparent;
+                box-shadow: transparent;
+                box-shadow: unset!important;
+            }
+            &:active{
+                outline: none;
+                background-color: transparent;
+                border-color: transparent;
+                box-shadow: unset!important;
+            }
+        }
+        .form-control{
+            border-color: transparent;
+            outline: none;
+            font-size: 0.75rem;
+            padding-left: 0.95rem;
+            &:focus{
+                outline: none;
+                box-shadow: unset!important;
+            }
         }
         
     }
-    &__filter{
-        padding: 1rem;
+    
+    .btn-country-list__filter{
+        padding: 0.85rem 1.5rem;;
         outline: none;
         border-radius: 5px;
         margin: 1rem;
+        font-size: 0.75rem;
+        text-align: left;
+        width: 200px;   
+    }
+    .dropdown{
         margin-right: auto;
-        width: 200px;
-        
+        &-menu{
+            width: 200px;
+            font-size: 0.75rem;
+        }
+        &-toggle{
+            &::after{
+                margin-left: 4rem;
+            }
+        }
+        &-item{
+            
+            padding: 0.45rem 1.5rem 0;
+        }
     }
     &__container{
         // padding-top: 10rem;

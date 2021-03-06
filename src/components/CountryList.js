@@ -1,26 +1,39 @@
 import React from 'react'
 import CountryCard from './CountryCard'
 import '../sass/_country-list.scss'
+import { Dropdown, DropdownButton, InputGroup, FormControl, Button } from 'react-bootstrap';
 
 export const CountryList = ({ countries }) => {
     return (
         <div className="country-list">
-            <input className=" fa country-list__search" placeholder="&#xF002; Search for a counrty..." />
-            <select className="country-list__filter">
-                <option value="All">Filter by region</option>
-                <option value="Africa">Africa</option>
-                <option value="America">America</option>
-                <option value="Asia">Asia</option>
-                <option value="Europe">Europe</option>
-                <option value="Oceania">Oceania</option>
-            </select>
+
+            <InputGroup className="country-list__search">
+                <InputGroup.Prepend>
+                    <Button variant="outline-secondary"> <span className="fa"> &#xF002; </span></Button>
+                </InputGroup.Prepend>
+                <FormControl
+                    placeholder="Search for a country..."
+                    aria-label="Search for a country..."
+                    aria-describedby="basic-addon1" />
+            </InputGroup>
+            <DropdownButton
+                id="dropdown-basic-button"
+                variant="country-list__filter"
+                title="Filter by Region" >
+                <Dropdown.Item href="#/action-1">Africa</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">America</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Asia</Dropdown.Item>
+                <Dropdown.Item href="#/action-1">Europe</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Oceania</Dropdown.Item>
+
+            </DropdownButton>
             <div className="country-list__container">
-            {countries.map((country, index) => (
+                {countries.map((country, index) => (
                     <CountryCard key={index} name={country.name} population={country.population} region={country.region} capital={country.capital} flag={country.flag}></CountryCard>
                 ))}
             </div>
-                
-            
+
+
         </div>
     )
 }

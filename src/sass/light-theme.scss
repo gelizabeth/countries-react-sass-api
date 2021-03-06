@@ -14,20 +14,40 @@ $input-color-l: hsl(0, 0%, 52%);
             background-color: $secondary-color-l;
         }
         .country-list{
-            &__search{
+            &__search, .input-group{
                 color: $input-color-l;
                 background-color: $secondary-color-l;
                 border: 1px solid $bg-color-l;
                 box-shadow: 0 3px 5px rgba(black, 0.2);
-                
-                &::placeholder{
-                    color: $input-color-l; 
+                .btn-outline-secondary{
+                    color: $input-color-l;
+                }
+                .form-control{
+                    color: $input-color-l;
+                    background-color: $secondary-color-l;
+                    &::placeholder{
+                        color: $input-color-l;
+                    }
                 }
             }
-            &__filter{
-                
+            .btn-country-list__filter{
+                border: 1px solid $bg-color-l;
+                box-shadow: 0 3px 5px rgba(black, 0.2);
                 color: $primary-color-l;
                 background-color: $secondary-color-l;
+                
+            }
+            .dropdown{
+                &-menu{
+                    border: 1px solid $bg-color-l;
+                box-shadow: 0 3px 5px rgba(black, 0.2);
+                
+                background-color: $secondary-color-l;
+                
+                }
+                &-item{
+                    color: $primary-color-l;
+                }
             }
         }
     }
