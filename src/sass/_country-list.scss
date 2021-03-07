@@ -107,12 +107,13 @@
 
 }
 }
+
 @include media-lg{
     .country-list{
         padding: 0  3.5rem ;
-        &__container{
-            grid-template-columns: repeat(4, auto);
-        }
+        // &__container{
+        //     grid-template-columns: repeat(4, auto);
+        // }
         
     }
    
@@ -122,6 +123,7 @@
         padding: 2rem  3.5rem ;
         &__container{
             margin-top: 1rem;
+            grid-template-columns: repeat(4, auto);
         }
     }
 }

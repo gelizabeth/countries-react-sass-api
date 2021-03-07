@@ -7,14 +7,12 @@ export const CountryList = ({ countries }) => {
 
     const [countriesDisplay, setCountriesDisplay] = useState([]);
     const [filter, setFilter] = useState('');
+    const [input, setInput] = useState('');
 
 
     
     useEffect(() => {
-
         setCountriesDisplay(countries);
-        
-        
     }, [countries]);
 
     useEffect(() => {
@@ -25,6 +23,13 @@ export const CountryList = ({ countries }) => {
         
     }, [filter]);
 
+    useEffect(() => {
+        let filtered = countries.filter(country => {
+            return country.name.toLocaleLowerCase().includes(input.toLocaleLowerCase());
+           });
+           setCountriesDisplay(filtered);
+    }, [input]);
+
     const addFilter = (event) => {
         //get everything after #/ and set is as a filter
         let userFilter = event.target.href.split('#/').pop();
@@ -33,6 +38,10 @@ export const CountryList = ({ countries }) => {
         } else setFilter(userFilter);
         
     }
+    const updateInput = async (event) => {
+        let value = event.target.value;
+        setInput(value);
+     }
     
     
     return (
@@ -45,7 +54,11 @@ export const CountryList = ({ countries }) => {
                 <FormControl
                     placeholder="Search for a country..."
                     aria-label="Search for a country..."
-                    aria-describedby="basic-addon1" />
+                    aria-describedby="basic-addon1" 
+                    input={input} 
+                    
+                    onChange={updateInput}
+                    />
                     
             </InputGroup>
             <DropdownButton

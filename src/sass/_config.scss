@@ -22,13 +22,14 @@ body{
         @content;
     }
 }
+
 @mixin media-lg {
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 944px) {
         @content;
     }
 }
 @mixin media-xl {
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1268px) {
         @content;
     }
 }
