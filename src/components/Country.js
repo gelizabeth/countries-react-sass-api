@@ -35,11 +35,14 @@ const Country = ({ countries }) => {
             <img className="country__flag" src={country?.flag} />
             <div className="country__name">{country?.name}</div>
             <div className="country__content">
+                <div className="container">
                 <div className="content__item"><span>Native Name:</span> {country?.nativeName}</div>
                 <div className="content__item"><span>Population:</span> {country?.population}</div>
                 <div className="content__item"><span>Region:</span> {country?.region}</div>
                 <div className="content__item"><span>Sub Region:</span> {country?.subregion}</div>
                 <div className="content__item"><span>Capital:</span> {country?.capital}</div>
+                </div>
+               
 
                 <div className="content__lists">
                     <div className="content__item"><span>Top Level Domain:</span> {country?.topLevelDomain}</div>
@@ -49,7 +52,11 @@ const Country = ({ countries }) => {
 
             </div>
             <div className="country__borders">
-                {borders?.map(border => <Link key={border.code} to={`/countries/${border.code}`}>{border.name}</Link>)}
+                <h3>Border Countries: </h3>
+                <div className="borders__container">
+                {borders?.map(border => <Link  className="country__link" key={border.code} to={`/countries/${border.code}`}>{border.name}</Link>)}
+                </div>
+                
             </div>
 
 

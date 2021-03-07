@@ -36,3 +36,23 @@
         }
     }
 }
+@include media-md{
+    .country-card{
+        
+        max-width: 230px;
+    }
+}
+@include media-lg{
+    .country-card{
+        
+        max-width: 200px;
+        height: 315px;
+    }
+}
+@include media-xl{
+    .country-card{
+        max-width: 280px;
+        height: 336px;
+        margin: 0rem auto 4rem;
+    }
+}

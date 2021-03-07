@@ -1,3 +1,5 @@
+@import './config';
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -13,9 +15,20 @@
     .button{
         font-size: 0.75rem;
         text-transform: capitalize;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        &:hover{
+            background: radial-gradient(rgba(black, 0.02), transparent);
+        }
+        
         .fa-moon{
             font-size: 0.75rem;
             margin: 0.8rem;
         }
+    }
+}
+@include media-lg{
+    .header{
+        padding: 0 3.5rem ;
     }
 }
