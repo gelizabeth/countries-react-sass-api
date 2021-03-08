@@ -42,7 +42,7 @@ Builds the app for production to the build folder.
 ## Contact me
 If you have questions about this project or want to work with me feel free to send me a message.
 
-📧 Email: liza.guyvan1@gmail.com
+📧 Email: liza.guyvan1@gmail.com /
 🌐 Web: [yelyzaveta.netlify.app](https://yelyzaveta.netlify.app/about)
 
 
