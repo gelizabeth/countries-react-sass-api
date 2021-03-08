@@ -8,9 +8,9 @@ Thanks for checking out my solution for this front-end coding challenge.
 
 ## The challenge
 
-The challenge is to integrate with the [REST Countries API](https://restcountries.eu) to pull country data and display it like in the designs.
+The challenge is to integrate the [REST Countries API](https://restcountries.eu) to pull country data and display it like in the designs.
 
-Your users should be able to:
+Users are able to:
 
 - See all countries from the API on the homepage
 - Search for a country using an `input` field
@@ -21,7 +21,7 @@ Your users should be able to:
 
 ## Solution [Live demo](https://countries-react-sass.netlify.app/)
 
-The project is build with React create-react-app and Sass for styling.
+For this solution i've used React and Sass. I've worked on routing, redirecting, data fetching in React and data filtering (filters by parts of the world and filtering with search field).
 
 ## Instalation and use
 If you want to clone repository and ajust this solution for your needs you'll need to follow some steps.
