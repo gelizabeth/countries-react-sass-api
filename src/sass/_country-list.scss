@@ -4,7 +4,7 @@
     border-color: transparent;
     background-color: transparent;
     box-shadow: transparent;
-    outline: none;
+    outline: none!important;
 }
 
 .country-list {
@@ -61,14 +61,21 @@
         text-align: left;
         width: 200px;
         box-shadow: $box-shadow;
+        @include transition-ease;
+        
+        &:focus{
+            
+            box-shadow: $box-shadow-active;
+        }
     }
 
     .dropdown {
         margin-right: auto;
-
+        @include reset-to-transparent();
         &-menu {
             width: 200px;
             font-size: 0.75rem;
+            box-shadow: $box-shadow;
         }
 
         &-toggle {

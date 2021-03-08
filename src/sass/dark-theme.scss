@@ -29,8 +29,8 @@ $secondary-color-d: hsl(209, 23%, 22%);
             &__search,
             .input-group {
                 @include set-color($secondary-color-d, $primary-color-d);
-                border: 1px solid $bg-color-d;
-                box-shadow: 0 3px 5px rgba(black, 0.2);
+                @include set-border($bg-color-d);
+                box-shadow: $box-shadow;
 
                 .btn-outline-secondary {
                     color: $primary-color-d;
@@ -46,14 +46,14 @@ $secondary-color-d: hsl(209, 23%, 22%);
             }
 
             .btn-country-list__filter {
-                border: 1px solid $bg-color-d;
+                @include set-border($bg-color-d);
                 @include set-color($secondary-color-d, $primary-color-d);
 
             }
 
             .dropdown {
                 &-menu {
-                    border: 1px solid $bg-color-d;
+                    @include set-border($bg-color-d);
                     background-color: $secondary-color-d;
                 }
 
@@ -65,7 +65,7 @@ $secondary-color-d: hsl(209, 23%, 22%);
         .country {
             &__button {
                 @include set-color($secondary-color-d, $primary-color-d);
-                border: 1px solid $bg-color-d;
+                @include set-border($bg-color-d);
             }
             &__link {
                 @include set-color($secondary-color-d, $primary-color-d);

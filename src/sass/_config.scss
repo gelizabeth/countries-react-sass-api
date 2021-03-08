@@ -18,6 +18,11 @@ $box-shadow-active: 0 0 10px 0 rgba(black, 0.2);
  background-color: $background;
  color: $color;
 }
+
+@mixin  set-border ($color) {
+    border: 1px solid $color;
+}
+
 @mixin transition-ease {
     transition: all 0.3s ease-in-out;
 }

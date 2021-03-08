@@ -3,76 +3,77 @@ $bg-color-l: hsl(0, 0%, 98%);
 $primary-color-l:hsl(200, 15%, 8%);
 $secondary-color-l: hsl(0, 0%, 100%);
 $input-color-l: hsl(0, 0%, 52%);
-.App{
-   
-    &_light{
+
+.App {
+
+    &_light {
         @include transition-ease;
-        background-color: $bg-color-l;
-        color: $primary-color-l;
-        .header{
-            h1{
-                a{
+        @include set-color($bg-color-l, $bg-color-l);
+
+        .header {
+            h1 {
+                a {
                     color: $primary-color-l;
                 }
             }
+            .button_theme{
+                color: $primary-color-l;
+            }
         }
-        .country-card{
+
+        .country-card {
             @include transition-ease;
-            color: $primary-color-l; 
-            background-color: $secondary-color-l;
-            
+            @include set-color($secondary-color-l, $primary-color-l);
         }
-        .country-list{
-            &__search, .input-group{
-                color: $input-color-l;
-                background-color: $secondary-color-l;
-                border: 1px solid $bg-color-l;
-                box-shadow: 0 3px 5px rgba(black, 0.2);
-                .btn-outline-secondary{
+
+        .country-list {
+
+            &__search,
+            .input-group {
+                @include set-color($secondary-color-l, $input-color-l);
+                @include set-border($bg-color-l);
+                box-shadow: $box-shadow;
+
+                .btn-outline-secondary {
                     color: $input-color-l;
                 }
-                .form-control{
-                    color: $input-color-l;
-                    background-color: $secondary-color-l;
-                    &::placeholder{
+
+                .form-control {
+                    @include set-color($secondary-color-l, $input-color-l);
+
+                    &::placeholder {
                         color: $input-color-l;
                     }
                 }
             }
-            .btn-country-list__filter{
-                border: 1px solid $bg-color-l;
-                box-shadow: 0 3px 5px rgba(black, 0.2);
-                color: $primary-color-l;
-                background-color: $secondary-color-l;
-                
+
+            .btn-country-list__filter {
+                @include set-border($bg-color-l);
+                @include set-color($secondary-color-l, $primary-color-l);
+
             }
-            .dropdown{
-                &-menu{
-                    border: 1px solid $bg-color-l;
-                box-shadow: 0 3px 5px rgba(black, 0.2);
-                
-                background-color: $secondary-color-l;
-                
+
+            .dropdown {
+                &-menu {
+                    @include set-border($bg-color-l);
+                    background-color: $secondary-color-l;
                 }
-                &-item{
+
+                &-item {
                     color: $primary-color-l;
                 }
             }
         }
-        .country{
 
-            &__button{
-                color: $primary-color-l;
-                background-color: $secondary-color-l;
-                border: 1px solid transparent;
-                
-                
-                
+        .country {
+            color: $primary-color-l;
+            &__button {
+                @include set-color($secondary-color-l, $primary-color-l);
+                @include set-border(transparent);
             }
-            &__link{
-                color: $primary-color-l;
-                background-color: $secondary-color-l;
-                
+
+            &__link {
+                @include set-color($secondary-color-l, $primary-color-l);
             }
         }
     }
