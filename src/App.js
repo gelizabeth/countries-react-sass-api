@@ -1,19 +1,20 @@
 import React from "react";
 import {
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
+
 
 import { useEffect, useState } from 'react';
 import './app.scss';
-
-import './sass/light-theme.scss'
-import './sass/dark-theme.scss'
 import { CountryList } from './components/CountryList';
 import Header from './components/Header'
 import Country from "./components/Country";
 
 function App() {
+  
+
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [countries, setCountries] = useState([]);
@@ -56,7 +57,7 @@ function App() {
           <Route exact path="/">
           <CountryList countries={countries}></CountryList>
           </Route>
-          <Route path='/countries/:id' children={<Country countries={countries}/>}>
+          <Route exact path='/countries/:id' children={<Country countries={countries}/>}>
           
         </Route>
         </Switch>

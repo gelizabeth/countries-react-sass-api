@@ -11,8 +11,13 @@
         font-size: 0.875rem;
         font-weight: 800;
         margin-bottom: 0;
+        a{
+            text-decoration: none; 
+        }
+        
+        
     }
-    .button{
+    .button_theme{
         font-size: 0.75rem;
         text-transform: capitalize;
         cursor: pointer;

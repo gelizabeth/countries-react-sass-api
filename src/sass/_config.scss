@@ -1,20 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 @import "~bootstrap/scss/bootstrap";
 
-body{
+body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+$box-shadow: 0 0 5px 0 rgba(black, 0.2);
+$box-shadow-active: 0 0 10px 0 rgba(black, 0.2);
 
- 
 
-@mixin transition-ease{
- transition: all 0.3s ease-in-out;
+@mixin set-color($background, $color){
+ background-color: $background;
+ color: $color;
+}
+@mixin transition-ease {
+    transition: all 0.3s ease-in-out;
 }
 
 @mixin media-md {
@@ -28,8 +33,22 @@ body{
         @content;
     }
 }
+
 @mixin media-xl {
     @media screen and (min-width: 1268px) {
         @content;
+    }
+}
+
+.button {
+    box-shadow: $box-shadow;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 2px;
+    @include transition-ease;
+
+    &:hover {
+        text-decoration: none;
+        box-shadow: $box-shadow-active;
     }
 }

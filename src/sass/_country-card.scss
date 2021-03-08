@@ -4,8 +4,13 @@
     margin: 0rem auto 2.5rem;
     height: 336px;
     border-radius: 5px;
-    box-shadow: 0 3px 5px rgba(black, 0.2);
+    box-shadow: 0 0px 5px rgba(black, 0.2);
     @include transition-ease;
+   text-decoration: none;
+   &:hover{
+    text-decoration: none;
+    box-shadow: 0 0px 25px rgba(black, 0.25);
+   }
     &__flag{
         width: 100%;
         height: 161px;
@@ -24,6 +29,8 @@
         margin-bottom: 1rem;
         font-size: 1.2rem;
         font-weight: 800;
+        
+        
     }
     &__content{
         .content__item{

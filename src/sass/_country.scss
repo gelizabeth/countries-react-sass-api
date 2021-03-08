@@ -1,93 +1,102 @@
 @import './config';
-.country{
+
+.country {
     // width: 100vw;
     padding: 2.5rem 1.7rem;
     display: flex;
     flex-direction: column;
-    &__button{
+
+    &__button {
         padding: 0.25rem 1.5rem;
         margin-bottom: 2rem;
         font-size: 0.9rem;
         max-width: 110px;
-            max-height: 40px;
-        &::before{
+        max-height: 40px;
+        &::before {
             content: '\2190';
             padding-right: 0.6rem;
         }
+
     }
-    &__flag{
+
+    &__flag {
         margin: 2rem 0;
         width: 100%;
         height: 230px;
         max-width: 470px;
     }
-    &__name{
+
+    &__name {
         margin-top: 0.6rem;
         font-weight: 800;
         font-size: 1.45rem;
     }
-    &__content{
+
+    &__content {
         margin: 1rem 0;
-        .container{
+
+        .container {
             margin: 0;
             padding: 0;
         }
-        .content{
-            
-            &__item{
+
+        .content {
+
+            &__item {
                 font-size: 0.9rem;
                 margin: 0.75rem 0;
-                span{
+
+                span {
                     font-weight: 600;
                 }
             }
-            &__lists{
+
+            &__lists {
                 margin: 2.65rem 0;
             }
         }
     }
-    &__borders{
+
+    &__borders {
         margin: 1rem 0;
-        
-        .borders__container{
-            
+
+        .borders__container {
+
             display: flex;
             flex-wrap: wrap;
         }
-        h3{
+
+        h3 {
             font-size: 1rem;
             font-weight: 600;
         }
     }
-    &__link{
+
+    &__link {
         padding: 0.3rem 1.7rem;
-        margin: 0.6rem ;
+        margin: 0.6rem;
         margin-left: 0;
         font-size: 0.75rem;
-        border-radius: 2px;
-        box-shadow: 0 0px 5px rgba(black, 0.2);
-        cursor: pointer;
-        
-        &:hover{
-            text-decoration: none;
-        }
     }
 
 }
-@include media-lg{
-    
-    .country{
+
+@include media-lg {
+
+    .country {
         height: 100vh;
         padding: 3.5rem 3.7rem 0;
         display: grid;
         grid-template-columns: 40% 60%;
-        grid-template-rows: 15% 85% ;
-        &__button{
-            
+        grid-template-rows: 15% 85%;
+
+        &__button {
+
             font-size: 1rem;
-            
+
         }
-        &__flag{
+
+        &__flag {
             grid-row: 2;
             grid-column: 1;
             max-width: 470px;
@@ -96,13 +105,15 @@
             height: auto;
             margin: 0;
         }
-        &__name{
+
+        &__name {
             grid-row: 2;
             grid-column: 2;
             margin: 0;
-            
+
         }
-        &__content{
+
+        &__content {
             grid-row: 2;
             grid-column: 2;
             display: flex;
@@ -110,23 +121,27 @@
             max-width: 450px;
             align-items: flex-start;
             margin-top: 2rem;
-            .container{
+
+            .container {
                 width: 50%;
                 margin: 0;
                 padding: 0;
             }
-            .content__lists{
+
+            .content__lists {
                 margin: 0;
             }
         }
-        &__borders{
+
+        &__borders {
             grid-row: 2;
             grid-column: 2;
             // align-self: end;
             margin-top: 14rem;
             display: flex;
             align-items: baseline;
-            h3{
+
+            h3 {
                 min-width: 140px;
             }
         }
