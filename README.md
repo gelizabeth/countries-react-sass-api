@@ -26,7 +26,7 @@ The project is build with React create-react-app and Sass for styling.
 ## Instalation and use
 If you want to clone repository and ajust this solution for your needs you'll need to follow some steps.
 
-`$ git clone https://github.com/gelizabeth/countries-react-sass-api.git`
+### `$ git clone https://github.com/gelizabeth/countries-react-sass-api.git`
 Clones repository to your local enviroment.
 
 ### `npm install`
