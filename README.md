@@ -39,6 +39,14 @@ Open http://localhost:3000 to view it in the browser.
 ### `npm run build`
 Builds the app for production to the build folder.
 
+## Contact me
+If you have questions about this project or want to work with me feel free to send me a message.
+
+📧 Email: liza.guyvan1@gmail.com
+🌐 Web: [yelyzaveta.netlify.app](https://yelyzaveta.netlify.app/about)
+
+
+
 
 
 
