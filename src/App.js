@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import {
   Switch,
   Route,
@@ -46,28 +46,37 @@ function App() {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
     return <div class="wrap">
-    <div class="loading">
-      <div class="text">NOW LOADING</div>
-    </div>
-  </div>;
+      <div class="loading">
+        <div class="text">NOW LOADING</div>
+      </div>
+    </div>;
   } else {
 
     return (
-      <div className={theme ? `App_light` : `App_dark`}>
+      <Suspense fallback={<div class="wrap">
+        <div class="loading">
+          <div class="text">NOW LOADING</div>
+        </div>
+      </div>}>
+        <div className={theme ? `App_light` : `App_dark`}>
 
-        <Header theme={theme} onThemeToggle={toggleTheme}></Header>
+          <Header theme={theme} onThemeToggle={toggleTheme}></Header>
 
-        <Switch>
-          <Route exact path="/">
-            <CountryList countries={countries}></CountryList>
-          </Route>
-          <Route exact path='/countries/:id' children={<Country countries={countries} />}>
+          <Switch>
 
-          </Route>
-        </Switch>
+            <Route exact path="/">
 
+              <CountryList countries={countries}></CountryList>
 
-      </div>
+            </Route>
+
+            <Route exact path='/countries/:id' children={<Country countries={countries} />}>
+
+            </Route>
+          </Switch>
+        </div>
+      </Suspense>
+
 
     );
   }
