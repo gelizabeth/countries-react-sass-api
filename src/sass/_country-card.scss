@@ -8,6 +8,7 @@
     box-shadow: 0 0px 5px rgba(black, 0.2);
     @include transition-ease;
     text-decoration: none;
+    display: block;
 
     &:hover {
         text-decoration: none;
