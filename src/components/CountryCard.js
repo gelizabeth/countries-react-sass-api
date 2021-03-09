@@ -10,7 +10,7 @@ const CountryCard = ({ name, population, region, capital, flag, alpha3Code }) =>
 
             <svg className="country-card__flag"
                 xmlns="http://www.w3.org/2000/svg">
-                <image href={flag} />
+                <image width='100%' height='100%' href={flag} />
             </svg>
 
             <div className="country-card__info">
