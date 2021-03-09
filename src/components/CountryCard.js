@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 import '../sass/_country-card.scss';
 
 const CountryCard = ({ name, population, region, capital, flag, alpha3Code }) => {
-
+ 
+    
     return (
 <Link to={`/countries/${alpha3Code}`} className="country-card">
         {/* <div className="country-card"> */}
 
             <svg className="country-card__flag"
-                xmlns="http://www.w3.org/2000/svg">
-                <image width='100%' height='100%' href={flag} />
+                xmlns="http://www.w3.org/2000/svg" 
+                style={{backgroundImage: `url(${flag})`}}>
+                {/* <image width='100%' height='100%' href={flag} /> */}
             </svg>
 
             <div className="country-card__info">
