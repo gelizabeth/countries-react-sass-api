@@ -4,8 +4,11 @@ $primary-color-l:hsl(200, 15%, 8%);
 $secondary-color-l: hsl(0, 0%, 100%);
 $input-color-l: hsl(0, 0%, 52%);
 
+body{
+    background-color: $bg-color-l;
+}
 .App {
-
+    min-height: 100%;
     &_light {
         @include transition-ease;
         @include set-color($bg-color-l, $bg-color-l);

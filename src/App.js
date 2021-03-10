@@ -58,7 +58,7 @@ function App() {
           <div class="text">NOW LOADING</div>
         </div>
       </div>}>
-        <div className={theme ? `App_light` : `App_dark`}>
+        <div className={theme ? `App App_light` : `App App_dark`}>
 
           <Header theme={theme} onThemeToggle={toggleTheme}></Header>
 
